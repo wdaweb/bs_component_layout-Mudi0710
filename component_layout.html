@@ -7,6 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <title>Component_Layout</title>
+  <style>
+    .border0 {
+      border: 0px;
+    }
+
+    .border-radius0 {
+      border-radius: 0rem;
+    }
+
+    .bg-gray {
+      background-color: var(--bs-gray-200) !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -67,7 +80,7 @@
     </button>
   </div>
 
-  <!-- 卡片 -->
+  <!-- 網格卡片 -->
   <div class="row row-cols-1 row-cols-lg-3 m-5">
     <div class="col">
       <div class="card">
@@ -96,6 +109,40 @@
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
             content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 卡片 -->
+  <div class="card bg-gray text-center border0 border-radius0">
+    <div class="row g-0">
+      <div class="col-lg-6">
+        <img src="./images/info01.png" class="img-fluid" style="max-width: 100%;">
+      </div>
+      <div class="col-lg-6 d-flex align-items-center">
+        <div class="card-body">
+          <h5 class="card-title fs-1">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content.
+            This content is a little bit longer.</p>
+          <a href="#" class="btn btn-success">VIEW STORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card bg-gray text-center border0 border-radius0">
+    <div class="row g-0 flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <img src="./images/info02.png" class="img-fluid" style="max-width: 100%;">
+      </div>
+      <div class="col-lg-6 d-flex align-items-center">
+        <div class="card-body">
+          <h5 class="card-title fs-1">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content.
+            This content is a little bit longer.</p>
+          <a href="#" class="btn btn-success">VIEW STORE</a>
         </div>
       </div>
     </div>
