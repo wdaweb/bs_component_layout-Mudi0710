@@ -24,8 +24,25 @@
       height: 50vh !important;
     }
 
-    @media (min-width: 1200px) {
-      .vh {
+    .fs-7 {
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 576px) {
+      .fs-sm-7 {
+        font-size: calc(0.9rem + 0.2vw) !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .px-md-6 {
+        padding-right: 4.5rem !important;
+        padding-left: 4.5rem !important;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .vh-lg {
         height: 75vh !important;
       }
     }
@@ -159,12 +176,89 @@
   </div>
 
   <!-- 地圖 -->
-  <div class="container-fluid"></div>
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7036497990493!2d121.4173269156221!3d25.044129283967667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1656746830025!5m2!1szh-TW!2stw"
-    class="vw-100 vh" style="border:0;" allowfullscreen></iframe>
+    class="vw-100 vh vh-lg" style="border:0;" allowfullscreen></iframe>
+
+  <!-- 表單 -->
+  <div class="container-fluid bg-gray">
+    <form class="row g-3 px-md-6 needs-validation" novalidate>
+      <div class="text-center">
+        <p class="fs-1 mt-5">聯絡我們</p>
+        <p class="fs-3 m-0">泰山咖啡莊園，傳承熱情 coding 精神</p>
+        <p class="fs-7 fs-sm-7"> 任何服務問題或建議，歡迎您透過客服表單告知我們，謝謝！</p>
+      </div>
+      <div class="col-lg-6">
+        <label for="inputName" class="form-label">姓名</label>
+        <div class="input-group">
+          <input type="text" class="form-control is-valid" id="inputName" required>
+          <div class="input-group-text">
+            <label class="form-check-label me-1" for="gender1">
+              先生
+            </label>
+            <input class="form-check-input me-3" type="radio" name="gender" id="gender1" checked>
+            <label class="form-check-label me-1" for="gender2">
+              女士
+            </label>
+            <input class="form-check-input" type="radio" name="gender" id="gender2">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <label for="inputTel" class="form-label">電話</label>
+        <input type="tel" class="form-control" id="inputTel" required>
+      </div>
+      <div class="col-lg-6">
+        <label for="inputEmail" class="form-label">電子信箱</label>
+        <input type="email" class="form-control" id="inputEmail" required>
+      </div>
+      <div class="col-lg-6">
+        <label for="inputQuestion" class="form-label">問題類型</label>
+        <select id="inputQuestion" class="form-select">
+          <option selected>餐飲建議</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="inputOpinion" class="form-label">意見需求</label>
+        <textarea class="form-control" id="inputOpinion" rows="5" required></textarea>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="subscribe">
+          <label class="form-check-label" for="subscribe">
+            訂閱泰山咖啡莊園最新資訊
+          </label>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-secondary">送出</button>
+      </div>
+    </form>
   </div>
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
 </body>
 
 </html>
